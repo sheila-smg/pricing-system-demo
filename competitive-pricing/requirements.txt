@@ -1,0 +1,9 @@
+xgboost>=2.0.0
+category_encoders
+lightgbm
+optuna
+scikit-learn
+pandas
+numpy
+plotnine
+joblib
