@@ -12,6 +12,9 @@ __pycache__/
 # Models (binary files — regenerate by running the training notebook)
 **/models/
 
+# Generated data (regenerate by running generate_data.py)
+**/data/*.csv
+
 # Virtual environments
 .venv/
 venv/
