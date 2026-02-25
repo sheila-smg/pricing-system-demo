@@ -240,7 +240,7 @@ def generate_insurance_data(
     if output_path is not None:
         Path(output_path).parent.mkdir(parents=True, exist_ok=True)
         df.to_csv(output_path, index=False)
-        print(f"\n  Saved → {output_path}")
+        print(f"\n  Saved -> {output_path}")
 
     return df
 
