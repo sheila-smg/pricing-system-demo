@@ -18,6 +18,14 @@ Key ideas:
 
 ---
 
-### `pricing/` *(coming soon)*
+### [`pricing/`](./pricing/)
 
-Own price optimisation — using the competitive model to recommend prices that balance conversion probability and margin.
+Builds the **own price** from the ground up using frequency–severity modelling on a synthetic insurance portfolio.
+
+Key ideas:
+- Frequency model: Poisson GLM baseline + XGBoost challenger using the **frozen estimator** pattern (base model predictions become a feature in the challenger)
+- Severity model: Gamma GLM baseline + XGBoost challenger, trained on claimants only and predicted on the full portfolio
+- Pure premium = frequency × severity, assembled for both base and challenger
+- Validation with **Ordered Lorenz curves** and normalised Gini coefficients
+
+**Run order:** `python data/generate_data.py` → `01_frequency_model.ipynb` → `02_severity_model.ipynb` → `03_validation.ipynb`
