@@ -1,8 +1,8 @@
 xgboost>=2.0.0
-category_encoders
-optuna
-scikit-learn
-pandas
-numpy
-plotnine
-joblib
+category_encoders>=2.6.0
+optuna>=3.0.0
+scikit-learn>=1.3.0
+pandas>=2.0.0
+numpy>=1.24.0
+plotnine>=0.12.0
+joblib>=1.3.0
